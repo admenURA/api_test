@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MAILING.COM</title>
+</head>
+<body>
+    <h2>рассылка</h2>
+    <form method="get" action="startmailing">
+        {% csrf_token %}
+        <p>Дата отправки:<br> <input name="firstdatemail" type="datetime-local" /></p>
+        <p>тег/код оператора:<br> <input name="tegcod" /></p>
+        <p>message:<br> <input name="messagemail" type="text" /></p>
+        <p>Дата окончания отправки:<br> <input name="seconddatemail" type="datetime-local" /></p>
+        <input type="submit" value="начать рассылку" />
+    </form>
+    <h3></h3>
+    <form method="get" action="client">
+        <input type="submit" value="Перейти к клиентам" />
+    </form>
+</body>
+</html>
